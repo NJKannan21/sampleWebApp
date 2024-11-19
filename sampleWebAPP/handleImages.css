@@ -1,0 +1,37 @@
+.masonry { display: flex; flex-wrap: wrap; gap: 24px; }
+.grid-column img { width: 100%; display: block; }
+.masonry .grid-item { margin-bottom: 24px; }
+
+.pagination { text-align: center; margin: 20px 0; }
+.pagination button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+.pagination button:disabled { background-color: #cccccc; cursor: not-allowed; }
+
+/* 3 columns for desktop screens */
+@media (min-width: 1025px) {
+    .masonry .grid-column {
+        flex: 1 1 calc(33.33% - 24px);
+    }
+}
+
+/* 2 columns for tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .masonry .grid-column {
+        flex: 1 1 calc(50% - 24px);
+    }
+}
+
+/* 1 column for mobile */
+@media (max-width: 768px) {
+    .masonry .grid-column {
+        flex: 1 1 100%;
+    }
+}
