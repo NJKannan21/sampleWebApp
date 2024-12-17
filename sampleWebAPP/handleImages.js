@@ -91,9 +91,9 @@ function getImages(apiUrl, gridColumn, apiKey) {
                             $(detailElm).removeClass("d-none");
 
                             $(detailElm).html(`
-                                <span class="badge bg-secondary fs-6">Author: ${photoDetails.user.name}</span>
-                                <span class="badge bg-secondary fs-6">Description: ${photoDetails.alt_description || "N/A"}</span>
-                                <span class="badge bg-secondary fs-6">Dimensions: ${photoDetails.width}x${photoDetails.height}</span>
+                                <span class="badge bg-secondary fs-6 text-wrap mt-4">Author: ${photoDetails.user.name}</span>
+                                <span class="badge bg-secondary fs-6 text-wrap my-2">Description: ${photoDetails.alt_description || "N/A"}</span>
+                                <span class="badge bg-secondary fs-6 text-wrap">Dimensions: ${photoDetails.width}x${photoDetails.height}</span>
                             `);
                         });
                     } else {
